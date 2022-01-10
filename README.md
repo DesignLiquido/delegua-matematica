@@ -1,0 +1,1 @@
+# Biblioteca para manipulação de operações matemáticas para Delégua e JavaScript

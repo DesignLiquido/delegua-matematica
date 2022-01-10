@@ -6,19 +6,7 @@ import { MatematicaErroEmTempoDeExecucao } from "./excecoes";
  * @param {inteiro[]} vetor Um vetor de números inteiros.
  * @returns O maior número encontrado em um vetor.
  */
-export function max(vetor) {
-  if (!Array.isArray(vetor))
-    throw new MatematicaErroEmTempoDeExecucao(
-      this.token,
-      "Parâmetro `vetor` deve ser um vetor, em max(vetor)."
-    );
-
-  if (vetor.some(isNaN))
-    throw new MatematicaErroEmTempoDeExecucao(
-      this.token,
-      "Todos os elementos de `vetor` deve ser numéricos, em max(vetor)."
-    );
-
+export function max(vetor: Array<number>): any {
   return Math.max.apply(null, vetor);
 }
 
@@ -27,30 +15,12 @@ export function max(vetor) {
  * @param {inteiro[]} vetor Um vetor de números inteiros.
  * @returns O menor número encontrado em um vetor.
  */
-export function min(vetor) {
-  if (!Array.isArray(vetor))
-    throw new MatematicaErroEmTempoDeExecucao(
-      this.token,
-      "Parâmetro `vetor` deve ser um vetor, em min(vetor)."
-    );
-
-  if (vetor.some(isNaN))
-    throw new MatematicaErroEmTempoDeExecucao(
-      this.token,
-      "Todos os elementos de `vetor` deve ser numéricos, em min(vetor)."
-    );
-
+export function min(vetor: Array<any>): any {
   return Math.min.apply(null, vetor);
 }
 
 //Soma de determinada matriz
-export function smtr(a) {
-  if (isNaN(a) || a === null)
-    throw new MatematicaErroEmTempoDeExecucao(
-      this.token,
-      "Você deve prover valores para smtr(a)."
-    );
-
+export function smtr(a: Array<any>): any {
   let z = 0;
   if (a.length == 1) {
     // a is a 1D row array
@@ -77,14 +47,14 @@ export function media() {
 
   if (argumentsLength <= 0) {
     throw new MatematicaErroEmTempoDeExecucao(
-      this.token,
+      null, //this.token,
       "Você deve fornecer um parâmetro para a função."
     );
   }
 
   if (argumentsLength > 1) {
     throw new MatematicaErroEmTempoDeExecucao(
-      this.token,
+      null, //this.token,
       "A função recebe apenas um parâmetro."
     );
   }
@@ -94,7 +64,7 @@ export function media() {
 
   if (!Array.isArray(args)) {
     throw new MatematicaErroEmTempoDeExecucao(
-      this.token,
+      null, //this.token,
       "Você deve fornecer um parâmetro do tipo vetor."
     );
   }
@@ -102,7 +72,7 @@ export function media() {
   // Valida se o array está vazio.
   if (!args.length) {
     throw new MatematicaErroEmTempoDeExecucao(
-      this.token,
+      null, //this.token,
       "Vetor vazio. Você deve fornecer ao menos um valor ao vetor."
     );
   }
@@ -111,7 +81,7 @@ export function media() {
   args.forEach((item) => {
     if (typeof item !== "number") {
       throw new MatematicaErroEmTempoDeExecucao(
-        this.token,
+        null, //this.token,
         "Você deve fornecer um vetor contendo apenas valores do tipo número."
       );
     }
@@ -128,32 +98,20 @@ export function media() {
 }
 
 //Média aritmética de uma matriz
-export function ve(a) {
-  if (isNaN(a) || a === null)
-    throw new MatematicaErroEmTempoDeExecucao(
-      this.token,
-      "Você deve prover valores para ve(a)."
-    );
-
-  if (a.length == 1) {
-    return aprox(smtr(a) / a[0].length, 4);
+export function ve(vetor: Array<any>): any {
+  if (vetor.length == 1) {
+    return aprox(smtr(vetor) / vetor[0].length, 4);
   } // a is a row array
-  if (a[0].length == 1) {
-    return aprox(smtr(a) / a.length, 4);
+  if (vetor[0].length == 1) {
+    return aprox(smtr(vetor) / vetor.length, 4);
   } // a is a column array
-  if (a[0].length == undefined) {
-    return aprox(smtr(a) / a.length, 4);
+  if (vetor[0].length == undefined) {
+    return aprox(smtr(vetor) / vetor.length, 4);
   }
 }
 
 //Covariância de duas matrizes
-export function covar(array1, array2) {
-  if (isNaN(array1) || array1 === null || isNaN(array1) || array2 === null)
-    throw new MatematicaErroEmTempoDeExecucao(
-      this.token,
-      "Você deve prover valores para covar(matriz1, matriz2)."
-    );
-
+export function covar(array1: Array<any>, array2: Array<any>): any {
   var u = ve(array1);
   var v = ve(array2);
   var arr1Len = array1.length;

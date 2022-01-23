@@ -2,7 +2,13 @@
 
 import { MatematicaErroEmTempoDeExecucao } from "./excecoes";
 
-export function graus(angle) {
+/**
+ * Constante pi.
+ * @see https://pt.wikipedia.org/wiki/Pi
+ */
+export function pi(): number { return Math.PI }
+
+export function graus(angle: any) {
   if (isNaN(angle) || angle === null)
     throw new MatematicaErroEmTempoDeExecucao(
       this.token,
@@ -13,7 +19,7 @@ export function graus(angle) {
 }
 
 //Seno de um número
-export function sen(x) {
+export function seno(x: any) {
   if (isNaN(x) || x === null)
     throw new MatematicaErroEmTempoDeExecucao(
       this.token,
@@ -24,7 +30,7 @@ export function sen(x) {
 }
 
 //Cosseno de um número
-export function cos(x) {
+export function cosseno(x: any) {
   if (isNaN(x) || x === null)
     throw new MatematicaErroEmTempoDeExecucao(
       this.token,
@@ -35,7 +41,7 @@ export function cos(x) {
 }
 
 //Tangente de um número
-export function tan(x) {
+export function tan(x: any) {
   if (isNaN(x) || x === null)
     throw new MatematicaErroEmTempoDeExecucao(
       this.token,
@@ -46,7 +52,7 @@ export function tan(x) {
 }
 
 //Arco cosseno de um número
-export function arcos(x) {
+export function arcos(x: any) {
   if (isNaN(x) || x === null)
     throw new MatematicaErroEmTempoDeExecucao(
       this.token,
@@ -57,7 +63,7 @@ export function arcos(x) {
 }
 
 //Arco seno de um número
-export function arsen(x) {
+export function arsen(x: any) {
   if (isNaN(x) || x === null)
     throw new MatematicaErroEmTempoDeExecucao(
       this.token,
@@ -68,7 +74,7 @@ export function arsen(x) {
 }
 
 //Arco tangente de um número
-export function artan(x) {
+export function artan(x: any) {
   if (isNaN(x) || x === null)
     throw new MatematicaErroEmTempoDeExecucao(
       this.token,
@@ -76,4 +82,15 @@ export function artan(x) {
     );
 
   return Math.atan(x);
+}
+
+/**
+ * Calcula o valor radiano de um ângulo. O radiano é o comprimento do arco formado 
+ * por um ângulo em uma circunferência.
+ * @param {inteiro} angulo O ângulo, em graus, do valor radiano desejado.
+ * @returns O valor, em radianos, do arco formado pelo ângulo.
+ * @see https://pt.wikipedia.org/wiki/Radiano
+ */
+ export function radiano(angulo: number): number {
+  return angulo * (Math.PI / 180);
 }

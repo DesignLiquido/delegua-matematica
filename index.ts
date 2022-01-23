@@ -36,23 +36,6 @@ export function moda(vetor: Array<number>): any {
   }).map(item => Number(item))
 }
 
-/**
- * Constante pi.
- * @see https://pt.wikipedia.org/wiki/Pi
- */
-export function pi(): number { return Math.PI }
-
-/**
- * Calcula o valor radiano de um ângulo. O radiano é o comprimento do arco formado 
- * por um ângulo em uma circunferência.
- * @param {inteiro} angulo O ângulo, em graus, do valor radiano desejado.
- * @returns O valor, em radianos, do arco formado pelo ângulo.
- * @see https://pt.wikipedia.org/wiki/Radiano
- */
-export function radiano(angulo: number): number {
-  return angulo * (Math.PI / 180);
-};
-
 //FUNÇÃO AFIM E QUADRÁTICA
 /**
  * Gera valores para abscissa.

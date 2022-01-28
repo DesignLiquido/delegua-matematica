@@ -60,12 +60,12 @@ export function gerarPontosAbscissa(distancia: number, valorPontoCentral: number
 };
 
 //Raíz da Função Afim
-export function fun1R(a: number, b: number) {
+export function fun1R(a: number, b: number): number {
   return (-1 * b) / a;
 };
 
 //Intervalo Preenchido
-export function linspace(startValue: number, stopValue: number, cardinality: number): Array<any> {
+export function linspace(startValue: number, stopValue: number, cardinality: number): Array<number> {
   const lista = [];
   const step = (stopValue - startValue) / (cardinality - 1);
   for (var i = 0; i < cardinality; i++) {
@@ -75,7 +75,7 @@ export function linspace(startValue: number, stopValue: number, cardinality: num
 };
 
 //Raízes da Função Quadrática
-export function fun2R(a: number, b: number, c: number): Array<any> {
+export function fun2R(a: number, b: number, c: number): Array<number> {
 
   // const r1 = (-1 * b + Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a);
   // const r2 = (-1 * b - Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a);

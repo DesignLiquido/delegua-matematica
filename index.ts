@@ -13,15 +13,15 @@ export function mediana(a: Array<any>): any {
  * @see https://pt.wikipedia.org/wiki/Moda_(estat%C3%ADstica)
  */
 export function moda(vetor: Array<number>): any {
-  const objectArr = vetor.reduce(
+  const vetorDeObjetos = vetor.reduce(
     function (acc, curr) {
       return acc[curr] ? ++acc[curr] : acc[curr] = 1, acc
     },
     {}
   )
   const counter = []
-  Object.keys(objectArr).filter(function (pos) {
-    counter.push(objectArr[pos])
+  Object.keys(vetorDeObjetos).filter(function (posicao) {
+    counter.push(vetorDeObjetos[posicao])
   })
   const max = Math.max.apply(null, counter)
 
@@ -29,9 +29,9 @@ export function moda(vetor: Array<number>): any {
     return []
   }
 
-  return Object.keys(objectArr).filter(function (pos) {
-    return objectArr[pos] === max
-      ? objectArr[pos]
+  return Object.keys(vetorDeObjetos).filter(function (posicao) {
+    return vetorDeObjetos[posicao] === max
+      ? vetorDeObjetos[posicao]
       : null
   }).map(item => Number(item))
 }
@@ -65,11 +65,11 @@ export function fun1R(a: number, b: number): number {
 };
 
 //Intervalo Preenchido
-export function linspace(startValue: number, stopValue: number, cardinality: number): Array<number> {
+export function linspace(valorInicial: number, valorDeParada: number, cardinalidade: number): Array<number> {
   const lista = [];
-  const step = (stopValue - startValue) / (cardinality - 1);
-  for (var i = 0; i < cardinality; i++) {
-    lista.push(startValue + (step * i));
+  const passo = (valorDeParada - valorInicial) / (cardinalidade - 1);
+  for (var i = 0; i < cardinalidade; i++) {
+    lista.push(valorInicial + (passo * i));
   }
   return lista;
 };

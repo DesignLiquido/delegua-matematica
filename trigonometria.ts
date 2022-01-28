@@ -6,8 +6,8 @@
  */
 export function pi(): number { return Math.PI }
 
-export function graus(angle: number): number {
-  return angle * (180 / Math.PI);
+export function graus(angulo: number): number {
+  return angulo * (180 / Math.PI);
 }
 
 //Seno de um número

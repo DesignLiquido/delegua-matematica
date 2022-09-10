@@ -22,7 +22,7 @@ export function min(vetor: Array<any>): any {
 
 
 // Retorna a média de um vetor de números
-export function media() {
+export function media(...vetores: Array<Array<number>>) {
   const argumentsLength = Object.keys(arguments).length;
 
   if (argumentsLength <= 0) {

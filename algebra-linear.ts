@@ -48,7 +48,7 @@ export function fun1R(a: number, b: number): number {
  * @param {number} a O valor de a. 
  * @param {number} b O valor de b.
  * @param {number} c O valor de c.
- * @returns A raiz da função quadrática.
+ * @returns As raizes da função quadrática.
  */
 export function fun2R(a: number, b: number, c: number): Array<number> {
   const xv = (-1 * b) / (2 * a);

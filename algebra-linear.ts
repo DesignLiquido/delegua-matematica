@@ -33,12 +33,23 @@ export function somaElementosMatriz(matriz: Array<number | number[]>): number {
   return vetor;
 };
 
-//Raíz da Função Afim
+/**
+ * Calcula a raíz da função afim.
+ * @param {number} a O valor de a. 
+ * @param {number} b O valor de b.
+ * @returns A raiz da função afim.
+ */
 export function fun1R(a: number, b: number): number {
   return (-1 * b) / a;
 };
 
-//Raízes da Função Quadrática
+/**
+ * Calcula as raízes da função quadráica.
+ * @param {number} a O valor de a. 
+ * @param {number} b O valor de b.
+ * @param {number} c O valor de c.
+ * @returns A raiz da função quadráica.
+ */
 export function fun2R(a: number, b: number, c: number): Array<number> {
 
   // const r1 = (-1 * b + Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a);

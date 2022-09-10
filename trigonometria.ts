@@ -6,36 +6,65 @@
  */
 export function pi(): number { return Math.PI }
 
+/**
+ * Converte radiano para graus.
+ * @param {numero} angulo Ângulo em radianos 
+ * @returns O ângulo em graus
+ */
 export function graus(angulo: number): number {
   return angulo * (180 / Math.PI);
 }
 
-//Seno de um número
-export function seno(valor: number): number {
-  return Math.sin(valor);
+/**
+ * Calcula o valor do seno de um ângulo.
+ * @param {numero} angulo Ângulo em radiano.
+ * @returns O seno do ângulo.
+ */
+export function seno(angulo: number): number {
+  return Math.sin(angulo);
 }
 
-//Cosseno de um número
-export function cosseno(valor: number): number {
-  return Math.cos(valor);
+/**
+ * Calcula o valor do cosseno de um ângulo.
+ * @param {numero} angulo Ângulo em radiano.
+ * @returns O cosseno do ângulo.
+ */
+export function cosseno(angulo: number): number {
+  return Math.cos(angulo);
 }
 
-//Tangente de um número
-export function tan(valor: number): number {
-  return Math.tan(valor);
+/**
+ * Calcula o valor da tangente de um ângulo.
+ * @param {numero} angulo Ângulo em radiano.
+ * @returns A tangente do ângulo.
+ */
+export function tan(angulo: number): number {
+  return Math.tan(angulo);
 }
 
-//Arco cosseno de um número
+/**
+ * Calcula o arco cosseno de um número.
+ * @param {numero} valor Um valor.
+ * @returns O arco cosseno.
+ */
 export function arcos(valor: number): number {
   return Math.acos(valor);
 }
 
-//Arco seno de um número
+/**
+ * Calcula o arco seno de um número.
+ * @param {numero} valor Um valor.
+ * @returns O arco seno.
+ */
 export function arsen(valor: number): number {
   return Math.asin(valor);
 }
 
-//Arco tangente de um número
+/**
+ * Calcula o arco tangente de um número.
+ * @param {numero} valor Um valor.
+ * @returns O arco tangente.
+ */
 export function artan(valor: number): number {
   return Math.atan(valor);
 }

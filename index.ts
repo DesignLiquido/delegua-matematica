@@ -1,4 +1,10 @@
-//Intervalo Preenchido
+/**
+ * Preenche um intervalo entre dois números dada uma cardinalidade.
+ * @param {numero} valorInicial O valor inicial.
+ * @param {numero} valorDeParada O valor de parada.
+ * @param {numero} cardinalidade A cardinalidade.
+ * @returns 
+ */
 export function linspace(valorInicial: number, valorDeParada: number, cardinalidade: number): Array<number> {
   const lista = [];
   const passo = (valorDeParada - valorInicial) / (cardinalidade - 1);
@@ -8,7 +14,12 @@ export function linspace(valorInicial: number, valorDeParada: number, cardinalid
   return lista;
 };
 
-//Aproximação de valores
+/**
+ * Aproximação d valores.
+ * @param {number} x Um valor a ser arredondado.
+ * @param {number} z O número de casas decimais.
+ * @returns O arredondamento do valor.
+ */
 export function aprox(x: any, z?: number): any {
   if (z == undefined) { z = 2; }
   if (typeof (x) == "number") { x = x.toFixed(z) }
@@ -25,7 +36,11 @@ export function aprox(x: any, z?: number): any {
   return x;
 };
 
-//Vetor de pontos aleatórios
+/**
+ * Cria um vetor de números aleatórios.
+ * @param {numero} numeroPontos O número de pontos aleatórios a ser gerado. 
+ * @returns O vetor de números aleatórios.
+ */
 export function pontosAleatorios(numeroPontos: number): any {
   let ex = 0;
   const x = [];
@@ -36,7 +51,6 @@ export function pontosAleatorios(numeroPontos: number): any {
 
   return aprox(x, 2);
 };
-
 
 /**
  * Conta quantas vezes um determinado valor aparece em um vetor.
@@ -57,27 +71,49 @@ export function exp(valor: number): number {
   return Math.exp(valor);
 };
 
-//Logaritmo natural
+/**
+ * Calcula o logarítimo natural.
+ * @param {number} valor Número a ser calculado.
+ * @returns O logarítimo do número.
+ */
 export function log(valor: number): number {
   return Math.log(valor);
 };
 
-// Retorna a base elevada ao expoente
+/**
+ * Faz a exponenciação de uma base a determinado expoente.
+ * @param {number} base O valor da base.
+ * @param {number} expoente O valor do expoente.
+ * @returns O cálculo da exponenciação.
+ */
 export function potencia(base: number, expoente: number): number {
   return Math.pow(base, expoente);
 };
 
-//Raíz quadrada
+/**
+ * Calcula a raíz quadrada.
+ * @param {number} valor Um número para aplicar a radiciação.
+ * @returns O valor da radiciação.
+ */
 export function raizQuadrada(valor: number): number {
   return Math.sqrt(valor);
 };
 
-// Retorna o comprimento de um vetor
+/**
+ * Retorna o comprimento de um vetor.
+ * @param {numero[]} vetor Um vetor de itens aleatórios. 
+ * @returns O comprimento do vetor.
+ */
 export function comprimentoVetor(vetor: Array<any>): number {
   return vetor.length;
 };
 
 // Retorna o menor número inteiro dentre o valor de "value"
+/**
+ * Arredonda o número para seu menor inteiro aproximado.
+ * @param {numero} value um valor a ser arredondado. 
+ * @returns O valor arredondado.
+ */
 export function minimoAproximado(value: number): number {
   return Math.floor(value);
 };

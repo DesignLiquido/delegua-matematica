@@ -7,7 +7,7 @@ import { MatematicaErroEmTempoDeExecucao } from "./excecoes";
  * @param {inteiro[]} vetor Um vetor de números inteiros.
  * @returns O maior número encontrado em um vetor.
  */
-export function max(vetor: Array<number>): any {
+export function max(vetor: Array<number>): number {
   return Math.max.apply(null, vetor);
 }
 
@@ -16,12 +16,15 @@ export function max(vetor: Array<number>): any {
  * @param {inteiro[]} vetor Um vetor de números inteiros.
  * @returns O menor número encontrado em um vetor.
  */
-export function min(vetor: Array<any>): any {
+export function min(vetor: Array<number>): number {
   return Math.min.apply(null, vetor);
 }
 
-
-// Retorna a média de um vetor de números
+/**
+ * Calcula a média dos elementos da lista
+ * @param {numero[]} vetores Um vetor de números.
+ * @returns O cálculo da média dos elementos.
+ */
 export function media(...vetores: Array<Array<number>>) {
   const argumentsLength = Object.keys(arguments).length;
 
@@ -77,7 +80,11 @@ export function media(...vetores: Array<Array<number>>) {
   return valoresSomados / args.length;
 }
 
-//Média aritmética de uma matriz
+/**
+ * Calcula a média aritimética de uma matriz.
+ * @param {number[]} vetor Um vetor de vetores.
+ * @returns O valor da média aritimética.
+ */
 export function ve(vetor: Array<any>): any {
   if (vetor.length == 1) {
     return aprox(somaElementosMatriz(vetor) / vetor[0].length, 4);
@@ -90,7 +97,12 @@ export function ve(vetor: Array<any>): any {
   }
 }
 
-//Covariância de duas matrizes
+/**
+ * Calcula a covariância de duas matrizes
+ * @param {numero[]} array1 Um vetor de números.
+ * @param {numero[]} array2 Um vetor de números.
+ * @returns O valor da coariância das duas matrizes.
+ */
 export function covar(array1: Array<any>, array2: Array<any>): any {
   var u = ve(array1);
   var v = ve(array2);

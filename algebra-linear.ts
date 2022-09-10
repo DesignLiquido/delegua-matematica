@@ -51,10 +51,6 @@ export function fun1R(a: number, b: number): number {
  * @returns A raiz da função quadrática.
  */
 export function fun2R(a: number, b: number, c: number): Array<number> {
-
-  // const r1 = (-1 * b + Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a);
-  // const r2 = (-1 * b - Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a);
-
   const xv = (-1 * b) / (2 * a);
   const yv = (-1 * (Math.pow(b, 2) - (4 * a * c))) / 4 * a;
 

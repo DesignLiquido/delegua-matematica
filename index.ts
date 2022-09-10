@@ -1,69 +1,3 @@
-//Mediana de uma matriz
-export function mediana(a: Array<any>): any {
-  a.sort(function (a, b) { return a - b; });
-  const mid = a.length / 2;
-  return mid % 1 ? a[mid - 0.5] : (a[mid - 1] + a[mid]) / 2;
-};
-
-/**
- * Calcula a moda de um vetor. A moda é o valor, ou valores, que mais são 
- * presentes em um conjunto.
- * @param {inteiro[]} vetor O conjunto a ser avaliado.
- * @returns O novo conjunto com os valores da moda.
- * @see https://pt.wikipedia.org/wiki/Moda_(estat%C3%ADstica)
- */
-export function moda(vetor: Array<number>): any {
-  const vetorDeObjetos = vetor.reduce(
-    function (acc, curr) {
-      return acc[curr] ? ++acc[curr] : acc[curr] = 1, acc
-    },
-    {}
-  )
-  const counter = []
-  Object.keys(vetorDeObjetos).filter(function (posicao) {
-    counter.push(vetorDeObjetos[posicao])
-  })
-  const max = Math.max.apply(null, counter)
-
-  if (max === 1) {
-    return []
-  }
-
-  return Object.keys(vetorDeObjetos).filter(function (posicao) {
-    return vetorDeObjetos[posicao] === max
-      ? vetorDeObjetos[posicao]
-      : null
-  }).map(item => Number(item))
-}
-
-//FUNÇÃO AFIM E QUADRÁTICA
-/**
- * Gera valores para abscissa.
- * @param {inteiro} distancia A distância entra dois pontos. 
- * @param {inteiro} valorPontoCentral O ponto central na abscissa.
- * @param {inteiro} numeroPontos Número de pontos a serem gerados (padrão: 7).
- * @returns Um vetor, contendo o número de pontos informado ou definido por padrão em uma abscissa.
- *          Se o número informado é par, um ponto negativo a mais é gerado.
- */
-export function gerarPontosAbscissa(distancia: number, valorPontoCentral: number, numeroPontos?: number) {
-  if (!numeroPontos) {
-    numeroPontos = 7;
-  }
-
-  const elementoInicial = valorPontoCentral - (((numeroPontos / 2) >> 0) * distancia);
-  const vetor = [];
-  for (let i = 0; i < numeroPontos; i++) {
-    vetor.push(elementoInicial + (i * distancia));
-  }
-
-  return vetor;
-};
-
-//Raíz da Função Afim
-export function fun1R(a: number, b: number): number {
-  return (-1 * b) / a;
-};
-
 //Intervalo Preenchido
 export function linspace(valorInicial: number, valorDeParada: number, cardinalidade: number): Array<number> {
   const lista = [];
@@ -72,18 +6,6 @@ export function linspace(valorInicial: number, valorDeParada: number, cardinalid
     lista.push(valorInicial + (passo * i));
   }
   return lista;
-};
-
-//Raízes da Função Quadrática
-export function fun2R(a: number, b: number, c: number): Array<number> {
-
-  // const r1 = (-1 * b + Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a);
-  // const r2 = (-1 * b - Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a);
-
-  const xv = (-1 * b) / (2 * a);
-  const yv = (-1 * (Math.pow(b, 2) - (4 * a * c))) / 4 * a;
-
-  return [xv, yv];
 };
 
 //Aproximação de valores
@@ -104,12 +26,11 @@ export function aprox(x: any, z?: number): any {
 };
 
 //Vetor de pontos aleatórios
-export function pontosAleatorios(valor: number): any {
-  let ex;
-  if (ex == undefined) { ex = 0; }
+export function pontosAleatorios(numeroPontos: number): any {
+  let ex = 0;
   const x = [];
   x[0] = 100;
-  for (let i = 1; i < valor; i++) {
+  for (let i = 1; i < numeroPontos; i++) {
     x[i] = ex + x[i - 1] + Math.random() * 2 - 1;
   }
 
@@ -127,7 +48,11 @@ export function numeroOcorrencias(vetor: Array<any>, valor: number): number {
   return vetor.filter((v) => (v === valor)).length;
 };
 
-//Exponencial
+/**
+ * Retorna a constante de Euler elevada ao valor passado por parâmetro
+ * @param {numero} valor A potência a elevar a constante e
+ * @returns Valor da constante e elevado à potência
+ */
 export function exp(valor: number): number {
   return Math.exp(valor);
 };

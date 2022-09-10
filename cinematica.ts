@@ -53,7 +53,7 @@ export function aceleracao(
  * @param {numero} s0 Valor de s0.
  * @param {numero} v Valor de v.
  * @param {numero} t Valor de t.
- * @returns Retorna o cálculo a função horária da posição.
+ * @returns O resultado da função horária da posição.
  */
 export function mrufh(s0: number, v: number, t: number): Array<string> {
   t = t + 1;
@@ -68,11 +68,11 @@ export function mrufh(s0: number, v: number, t: number): Array<string> {
 }
 
 /**
- * Calcula o gráfico da velocidade (M.R.U.V).
+ * Calcula o Movimento Retilíneo Uniformemente Variado.
  * @param {number} s0 Valor de s0.
  * @param {number} s Valor de s.
  * @param {number} a Valor de a.
- * @returns 
+ * @returns O valor do M.R.U.V.
  */
 export function mruv(s0: number, s: number, a: number): Array<any> {
   const vf = new Array();

@@ -68,11 +68,11 @@ export function mrufh(s0: number, v: number, t: number): Array<string> {
 }
 
 /**
- * Calcula o gráfico da velocidade (M.R.U.V).
+ * Calcula o Movimento Retilíneo Uniformemente Variado.
  * @param {number} s0 Valor de s0.
  * @param {number} s Valor de s.
  * @param {number} a Valor de a.
- * @returns 
+ * @returns O valor do M.R.U.V.
  */
 export function mruv(s0: number, s: number, a: number): Array<any> {
   const vf = new Array();

@@ -49,11 +49,11 @@ export function aceleracao(
 }
 
 /**
- * Calcula a função horária da posição (M.R.U).
+ * Calcula a função horária (M.R.U).
  * @param {numero} s0 Valor de s0.
  * @param {numero} v Valor de v.
  * @param {numero} t Valor de t.
- * @returns Retorna o cálculo a função horária da posição.
+ * @returns Retorna o cálculo a função horária.
  */
 export function mrufh(s0: number, v: number, t: number): Array<string> {
   t = t + 1;

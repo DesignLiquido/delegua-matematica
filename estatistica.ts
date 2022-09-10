@@ -1,4 +1,5 @@
 import { aprox } from ".";
+import { somaElementosMatriz } from "./algebra-linear";
 import { MatematicaErroEmTempoDeExecucao } from "./excecoes";
 
 /**
@@ -19,27 +20,6 @@ export function min(vetor: Array<any>): any {
   return Math.min.apply(null, vetor);
 }
 
-//Soma de determinada matriz
-export function smtr(a: Array<any>): any {
-  let z = 0;
-  if (a.length == 1) {
-    // a is a 1D row array
-    for (let j = 0; j < a[0].length; j++) {
-      z = z + a[0][j];
-    }
-  } else if (a[0].length == 1) {
-    // a is a 1D column array
-    for (let i = 0; i < a.length; i++) {
-      z = z + a[i][0];
-    }
-  } else {
-    for (let j = 0; j < a.length; j++) {
-      z = z + a[j];
-    }
-  }
-
-  return aprox(z, 2);
-}
 
 // Retorna a média de um vetor de números
 export function media() {
@@ -100,13 +80,13 @@ export function media() {
 //Média aritmética de uma matriz
 export function ve(vetor: Array<any>): any {
   if (vetor.length == 1) {
-    return aprox(smtr(vetor) / vetor[0].length, 4);
+    return aprox(somaElementosMatriz(vetor) / vetor[0].length, 4);
   } // a is a row array
   if (vetor[0].length == 1) {
-    return aprox(smtr(vetor) / vetor.length, 4);
+    return aprox(somaElementosMatriz(vetor) / vetor.length, 4);
   } // a is a column array
   if (vetor[0].length == undefined) {
-    return aprox(smtr(vetor) / vetor.length, 4);
+    return aprox(somaElementosMatriz(vetor) / vetor.length, 4);
   }
 }
 
@@ -118,5 +98,47 @@ export function covar(array1: Array<any>, array2: Array<any>): any {
   var sq_dev = new Array(arr1Len);
   for (var i = 0; i < arr1Len; i++)
     sq_dev[i] = (array1[i] - u) * (array2[i] - v);
-  return smtr(sq_dev) / (arr1Len - 1);
+  return somaElementosMatriz(sq_dev) / (arr1Len - 1);
+}
+
+/**
+ * Calcula a mediana de um vetor ou matriz
+ * @param {numero[]} vetor  Vetor de números
+ * @returns Número com o valor da mediana
+ */
+ export function mediana(vetor: Array<number>): number {
+  vetor.sort(function (a, b) { return a - b; });
+  const meio = vetor.length / 2;
+  return meio % 1 ? vetor[meio - 0.5] : (vetor[meio - 1] + vetor[meio]) / 2;
+};
+
+/**
+ * Calcula a moda de um vetor. A moda é o valor, ou valores, que mais são 
+ * presentes em um conjunto.
+ * @param {numero[]} vetor O conjunto a ser avaliado.
+ * @returns O novo conjunto com os valores da moda.
+ * @see https://pt.wikipedia.org/wiki/Moda_(estat%C3%ADstica)
+ */
+ export function moda(vetor: Array<number>): number[] {
+  const vetorDeObjetos = vetor.reduce(
+    function (acc, curr) {
+      return acc[curr] ? ++acc[curr] : acc[curr] = 1, acc
+    },
+    {}
+  )
+  const counter = []
+  Object.keys(vetorDeObjetos).filter(function (posicao) {
+    counter.push(vetorDeObjetos[posicao])
+  })
+  const max = Math.max.apply(null, counter)
+
+  if (max === 1) {
+    return []
+  }
+
+  return Object.keys(vetorDeObjetos).filter(function (posicao) {
+    return vetorDeObjetos[posicao] === max
+      ? vetorDeObjetos[posicao]
+      : null
+  }).map(item => Number(item))
 }

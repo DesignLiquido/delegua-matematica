@@ -1,4 +1,3 @@
-import { mediana, moda } from '../estatistica';
 import { aprox, comprimentoVetor, exp, linspace, log, minimoAproximado, numeroOcorrencias, pontosAleatorios, potencia, raizQuadrada } from '../index';
 
 describe('aprox', () => {

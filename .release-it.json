@@ -7,8 +7,5 @@
   },
   "npm": {
     "publishPath": "dist"
-  },
-  "hooks": {
-    "after:bump": "copyfiles -V ./package.json ./dist"
   }
 }

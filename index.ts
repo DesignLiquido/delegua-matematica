@@ -1,20 +1,4 @@
 /**
- * Preenche um intervalo entre dois números dada uma cardinalidade.
- * @param {numero} valorInicial O valor inicial.
- * @param {numero} valorDeParada O valor de parada.
- * @param {numero} cardinalidade A cardinalidade.
- * @returns 
- */
-export function linspace(valorInicial: number, valorDeParada: number, cardinalidade: number): Array<number> {
-  const lista = [];
-  const passo = (valorDeParada - valorInicial) / (cardinalidade - 1);
-  for (var i = 0; i < cardinalidade; i++) {
-    lista.push(valorInicial + (passo * i));
-  }
-  return lista;
-};
-
-/**
  * Aproximação d valores.
  * @param {number} x Um valor a ser arredondado.
  * @param {number} z O número de casas decimais.
@@ -60,43 +44,6 @@ export function pontosAleatorios(numeroPontos: number): any {
  */
 export function numeroOcorrencias(vetor: Array<any>, valor: number): number {
   return vetor.filter((v) => (v === valor)).length;
-};
-
-/**
- * Retorna a constante de Euler elevada ao valor passado por parâmetro
- * @param {numero} valor A potência a elevar a constante e
- * @returns Valor da constante e elevado à potência
- */
-export function exp(valor: number): number {
-  return Math.exp(valor);
-};
-
-/**
- * Calcula o logarítimo natural.
- * @param {number} valor Número a ser calculado.
- * @returns O logarítimo do número.
- */
-export function log(valor: number): number {
-  return Math.log(valor);
-};
-
-/**
- * Faz a exponenciação de uma base a determinado expoente.
- * @param {number} base O valor da base.
- * @param {number} expoente O valor do expoente.
- * @returns O cálculo da exponenciação.
- */
-export function potencia(base: number, expoente: number): number {
-  return Math.pow(base, expoente);
-};
-
-/**
- * Calcula a raíz quadrada.
- * @param {number} valor Um número para aplicar a radiciação.
- * @returns O valor da radiciação.
- */
-export function raizQuadrada(valor: number): number {
-  return Math.sqrt(valor);
 };
 
 /**

@@ -1,4 +1,4 @@
-import { pi, graus, seno, cosseno, radiano, tan, arcos, arsen, artan } from '../trigonometria';
+import { pi, graus, seno, cosseno, radiano, tangente, arcoCosseno, arcoSeno, arcoTangente } from '../trigonometria';
 
 describe('seno', () => {
   it('atira exceção se num for nulo', () => {
@@ -44,51 +44,51 @@ describe('radiano', () => {
   })
 })
 
-describe('tan', () => {
+describe('tangente', () => {
 
   it('atira exceção se num for nulo', () => {
     // expect(() => tan(null)).toThrow();
-    expect(tan(null)).toEqual(0);
+    expect(tangente(null)).toEqual(0);
   })
 
   it('calcula a tangente', () => {
-    expect(tan(180)).toEqual(1.3386902103511544);
+    expect(tangente(180)).toEqual(1.3386902103511544);
   })
 })
 
-describe('arcos', () => {
+describe('arcoCosseno', () => {
 
   it.skip('atira exceção se num for nulo', () => {
     // expect(() => arcos(null)).toThrow();
-    console.log(arcos(null)) // 1.5707963267948966 ????
-    expect(arcos(null)).toEqual(0);
+    // console.log(arcoCosseno(null)) // 1.5707963267948966 ????
+    expect(arcoCosseno(null)).toEqual(0);
   })
 
   it('calcula o arco cosseno', () => {
-    expect(arcos(0)).toEqual(1.5707963267948966);
+    expect(arcoCosseno(0)).toEqual(1.5707963267948966);
   })
 })
 
-describe('arsen', () => {
+describe('arcoSeno', () => {
 
   it('atira exceção se num for nulo', () => {
     // expect(() => arsen(null)).toThrow();
-    expect(arsen(null)).toEqual(0);
+    expect(arcoSeno(null)).toEqual(0);
   })
 
   it('calcula o arco seno', () => {
-    expect(arsen(1)).toEqual(1.5707963267948966);
+    expect(arcoSeno(1)).toEqual(1.5707963267948966);
   })
 })
 
-describe('artan', () => {
+describe('arcoTangente', () => {
 
   it('atira exceção se num for nulo', () => {
     // expect(() => artan(null)).toThrow();
-    expect(artan(null)).toEqual(0);
+    expect(arcoTangente(null)).toEqual(0);
   })
 
   it('calcula o arco seno', () => {
-    expect(artan(1)).toEqual(0.7853981633974483);
+    expect(arcoTangente(1)).toEqual(0.7853981633974483);
   })
 })

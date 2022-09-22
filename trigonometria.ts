@@ -38,7 +38,7 @@ export function cosseno(angulo: number): number {
  * @param {numero} angulo Ângulo em radiano.
  * @returns A tangente do ângulo.
  */
-export function tan(angulo: number): number {
+export function tangente(angulo: number): number {
   return Math.tan(angulo);
 }
 
@@ -47,7 +47,7 @@ export function tan(angulo: number): number {
  * @param {numero} valor Um valor.
  * @returns O arco cosseno.
  */
-export function arcos(valor: number): number {
+export function arcoCosseno(valor: number): number {
   return Math.acos(valor);
 }
 
@@ -56,7 +56,7 @@ export function arcos(valor: number): number {
  * @param {numero} valor Um valor.
  * @returns O arco seno.
  */
-export function arsen(valor: number): number {
+export function arcoSeno(valor: number): number {
   return Math.asin(valor);
 }
 
@@ -65,7 +65,7 @@ export function arsen(valor: number): number {
  * @param {numero} valor Um valor.
  * @returns O arco tangente.
  */
-export function artan(valor: number): number {
+export function arcoTangente(valor: number): number {
   return Math.atan(valor);
 }
 

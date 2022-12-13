@@ -1,4 +1,4 @@
-import { aprox, comprimentoVetor,  minimoAproximado, numeroOcorrencias, pontosAleatorios } from '../index';
+import { aprox, comprimentoVetor,  arredondarParaBaixo, numeroOcorrencias, pontosAleatorios } from '../index';
 
 describe('aprox', () => {
   it('atira exceção se num for nulo', () => {
@@ -30,6 +30,6 @@ describe('comprimentoVetor', () => {
 
 describe('minimoAproximado', () => {
   it('calcula o comprimento do vetor', () => {
-    expect(minimoAproximado(10.2)).toEqual(10);
+    expect(arredondarParaBaixo(10.2)).toEqual(10);
   })
 })

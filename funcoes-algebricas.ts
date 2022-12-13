@@ -3,18 +3,18 @@
  * @param {numero} valor A potência a elevar a constante e
  * @returns Valor da constante e elevado à potência
  */
- export function exp(valor: number): number {
+export function exp(valor: number): number {
   return Math.exp(valor);
-};
+}
 
 /**
  * Calcula o logarítimo natural.
  * @param {number} valor Número a ser calculado.
  * @returns O logarítimo do número.
  */
- export function logaritmo(valor: number): number {
+export function logaritmo(valor: number): number {
   return Math.log(valor);
-};
+}
 
 /**
  * Faz a exponenciação de uma base a determinado expoente.
@@ -22,9 +22,9 @@
  * @param {number} expoente O valor do expoente.
  * @returns O cálculo da exponenciação.
  */
- export function potencia(base: number, expoente: number): number {
+export function potencia(base: number, expoente: number): number {
   return Math.pow(base, expoente);
-};
+}
 
 /**
  * Gera e retorna um valor aleatório.
@@ -32,8 +32,8 @@
  */
 //Funçao que gera um valor aleatório
 export function aleatorio(): number {
-	return Math.random();
-};
+  return Math.random();
+}
 
 /**
  * Calcula a raíz quadrada.
@@ -42,4 +42,4 @@ export function aleatorio(): number {
  */
 export function raizQuadrada(valor: number): number {
   return Math.sqrt(valor);
-};
+}

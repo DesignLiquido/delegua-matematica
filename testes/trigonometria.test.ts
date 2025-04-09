@@ -1,94 +1,91 @@
-import { pi, graus, seno, cosseno, radiano, tangente, arcoCosseno, arcoSeno, arcoTangente } from '../trigonometria';
+import {
+  pi,
+  graus,
+  seno,
+  cosseno,
+  radiano,
+  tangente,
+  arcoCosseno,
+  arcoSeno,
+  arcoTangente,
+} from "../trigonometria";
 
-describe('seno', () => {
-  it('atira exceção se num for nulo', () => {
-    // expect(() => seno(null)).toThrow();
-    expect(seno(null)).toEqual(0);
-  })
+describe("seno", () => {
+  it("atira exceção se num for nulo", () => {
+    expect(() => seno(undefined, null)).toThrow();
+  });
 
-  it('calcula o seno', () => {
-    expect(seno(90)).toBe(0.8939966636005579);
-  })
-})
+  it("calcula o seno de 90 graus", () => {
+    expect(seno(undefined, 90)).toBe(0.8939966636005579);
+  });
+});
 
-describe('cosseno', () => {
-  it('atira exceção se num for nulo', () => {
-    // expect(() => cosseno(null)).toThrow();
-    expect(cosseno(null)).toEqual(1);
-  })
+describe("cosseno", () => {
+  it("atira exceção se num for nulo", () => {
+    expect(() => cosseno(undefined, null)).toThrow();
+  });
 
-  it('calcula o cosseno', () => {
-    expect(cosseno(90)).toBe(-0.4480736161291702);
-  })
-})
+  it("calcula o cosseno de 90 graus", () => {
+    expect(cosseno(undefined, 90)).toBe(-0.4480736161291702);
+  });
+});
 
-describe('graus', () => {
-  it('atira exceção se num for nulo', () => {
-    // expect(() => graus(null)).toThrow();
-    expect(graus(null)).toEqual(0);
-  })
+describe("graus", () => {
+  it("atira exceção se num for nulo", () => {
+    expect(() => graus(undefined, null)).toThrow();
+  });
 
-  /* it('calcula o ângulo', () => {
-    expect(graus(pi)).toBe(180);
-  }) */
-})
+  it("calcula o ângulo de pi", () => {
+    expect(graus(undefined, Math.PI)).toBe(180);
+  });
+});
 
-describe('radiano', () => {
-  it('atira exceção se num for nulo', () => {
-    // expect(() => radiano(null)).toThrow();
-    expect(radiano(null)).toEqual(0);
-  })
+describe("radiano", () => {
+  it("atira exceção se num for nulo", () => {
+    expect(() => radiano(undefined, null)).toThrow();
+  });
 
-  it('calcula o radiano', () => {
-    expect(radiano(180)).toBe(pi());
-  })
-})
+  it("calcula o radiano de 180 graus", () => {
+    expect(radiano(undefined, 180)).toBe(Math.PI);
+  });
+});
 
-describe('tangente', () => {
+describe("tangente", () => {
+  it("atira exceção se num for nulo", () => {
+    expect(() => tangente(undefined, null)).toThrow();
+  });
 
-  it('atira exceção se num for nulo', () => {
-    // expect(() => tan(null)).toThrow();
-    expect(tangente(null)).toEqual(0);
-  })
+  it("calcula a tangente", () => {
+    expect(tangente(undefined, 180)).toEqual(1.3386902103511544);
+  });
+});
 
-  it('calcula a tangente', () => {
-    expect(tangente(180)).toEqual(1.3386902103511544);
-  })
-})
+describe("arcoCosseno", () => {
+  it("atira exceção se num for nulo", () => {
+    expect(() => arcoCosseno(undefined, null)).toThrow();
+  });
 
-describe('arcoCosseno', () => {
+  it("calcula o arco cosseno de zero", () => {
+    expect(arcoCosseno(undefined, 0)).toEqual(1.5707963267948966);
+  });
+});
 
-  it.skip('atira exceção se num for nulo', () => {
-    // expect(() => arcos(null)).toThrow();
-    // console.log(arcoCosseno(null)) // 1.5707963267948966 ????
-    expect(arcoCosseno(null)).toEqual(0);
-  })
+describe("arcoSeno", () => {
+  it("atira exceção se num for nulo", () => {
+    expect(() => arcoSeno(undefined, null)).toThrow();
+  });
 
-  it('calcula o arco cosseno', () => {
-    expect(arcoCosseno(0)).toEqual(1.5707963267948966);
-  })
-})
+  it("calcula o arco seno de 1", () => {
+    expect(arcoSeno(undefined, 1)).toEqual(1.5707963267948966);
+  });
+});
 
-describe('arcoSeno', () => {
+describe("arcoTangente", () => {
+  it("atira exceção se num for nulo", () => {
+    expect(() => arcoTangente(undefined, null)).toThrow();
+  });
 
-  it('atira exceção se num for nulo', () => {
-    // expect(() => arsen(null)).toThrow();
-    expect(arcoSeno(null)).toEqual(0);
-  })
-
-  it('calcula o arco seno', () => {
-    expect(arcoSeno(1)).toEqual(1.5707963267948966);
-  })
-})
-
-describe('arcoTangente', () => {
-
-  it('atira exceção se num for nulo', () => {
-    // expect(() => artan(null)).toThrow();
-    expect(arcoTangente(null)).toEqual(0);
-  })
-
-  it('calcula o arco seno', () => {
-    expect(arcoTangente(1)).toEqual(0.7853981633974483);
-  })
-})
+  it("calcula o arco seno", () => {
+    expect(arcoTangente(undefined, 1)).toEqual(0.7853981633974483);
+  });
+});

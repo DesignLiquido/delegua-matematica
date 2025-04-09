@@ -1,10 +1,11 @@
 /**
  * Aproximação de valores.
+ * @param {any} _ O visitante da instrução, normalmente um interpretador.
  * @param {number} x Um valor a ser arredondado.
  * @param {number} casasDecimais O número de casas decimais.
  * @returns O arredondamento do valor.
  */
-export function aprox(x: any, casasDecimais?: number): any {
+export function aprox(_: any, x: any, casasDecimais?: number): any {
   if (casasDecimais == undefined) {
     casasDecimais = 2;
   }
@@ -27,15 +28,17 @@ export function aprox(x: any, casasDecimais?: number): any {
       x[i][j] = parseFloat(x[i][j].toFixed(casasDecimais));
     }
   }
+
   return x;
 }
 
 /**
  * Cria um vetor de números aleatórios.
- * @param {numero} numeroPontos O número de pontos aleatórios a ser gerado.
+ * @param {any} _ O visitante da instrução, normalmente um interpretador.
+ * @param {number} numeroPontos O número de pontos aleatórios a ser gerado.
  * @returns O vetor de números aleatórios.
  */
-export function pontosAleatorios(numeroPontos: number): any {
+export function pontosAleatorios(_: any, numeroPontos: number): any {
   let ex = 0;
   const x = [];
   x[0] = 100;
@@ -49,9 +52,10 @@ export function pontosAleatorios(numeroPontos: number): any {
 //
 /**
  * Arredonda o número passado por parâmetro para baixo.
- * @param {numero} valor O valor a ser arredondado.
+ * @param {any} _ O visitante da instrução, normalmente um interpretador.
+ * @param {number} valor O valor a ser arredondado.
  * @returns O valor arredondado para baixo, como um número inteiro.
  */
-export function arredondarParaBaixo(valor: number): number {
+export function arredondarParaBaixo(_: any, valor: number): number {
   return Math.floor(valor);
 }

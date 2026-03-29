@@ -7,7 +7,7 @@ import {
   areaTriangulo,
   distanciaDoisPontos,
   pontoMedio,
-} from "../geometria-plana";
+} from "../fontes/geometria-plana";
 
 describe("areaCirculo", () => {
   it("calcula a área do círculo", () => {

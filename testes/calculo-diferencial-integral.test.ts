@@ -1,4 +1,4 @@
-import { limite } from "../calculo-diferencial-integral";
+import { limite } from "../fontes/calculo-diferencial-integral";
 
 describe("limite", () => {
   it("testa quando o valor é maior que o máximo", () => {

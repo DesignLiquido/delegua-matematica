@@ -6,7 +6,7 @@ import {
   fun2,
   xVertice,
   yVertice,
-} from "../funcoes-primeiro-grau";
+} from "../fontes/funcoes-primeiro-grau";
 
 describe("linspace", () => {
   it("intervalo preenchido", () => {

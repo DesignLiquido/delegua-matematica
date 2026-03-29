@@ -4,7 +4,7 @@ import {
   logaritmo,
   potencia,
   raizQuadrada,
-} from "../funcoes-algebricas";
+} from "../fontes/funcoes-algebricas";
 
 describe("exp", () => {
   it("calcula a constante de Euler elevada ao parâmetros", () => {
@@ -32,7 +32,7 @@ describe("aleatorio", () => {
 
 describe("raizQuadrada", () => {
   it("atira exceção se num for nulo", () => {
-    expect(() => raizQuadrada(undefined, null)).toThrow();
+    expect(() => raizQuadrada(undefined, null as any)).toThrow();
   });
 
   it("calcula a raiz quadrada de 4", () => {

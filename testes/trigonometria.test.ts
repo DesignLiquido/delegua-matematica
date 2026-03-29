@@ -8,11 +8,11 @@ import {
   arcoCosseno,
   arcoSeno,
   arcoTangente,
-} from "../trigonometria";
+} from "../fontes/trigonometria";
 
 describe("seno", () => {
   it("atira exceção se num for nulo", () => {
-    expect(() => seno(undefined, null)).toThrow();
+    expect(() => seno(undefined, null as any)).toThrow();
   });
 
   it("calcula o seno de 90 graus", () => {
@@ -22,7 +22,7 @@ describe("seno", () => {
 
 describe("cosseno", () => {
   it("atira exceção se num for nulo", () => {
-    expect(() => cosseno(undefined, null)).toThrow();
+    expect(() => cosseno(undefined, null as any)).toThrow();
   });
 
   it("calcula o cosseno de 90 graus", () => {
@@ -32,7 +32,7 @@ describe("cosseno", () => {
 
 describe("graus", () => {
   it("atira exceção se num for nulo", () => {
-    expect(() => graus(undefined, null)).toThrow();
+    expect(() => graus(undefined, null as any)).toThrow();
   });
 
   it("calcula o ângulo de pi", () => {
@@ -42,7 +42,7 @@ describe("graus", () => {
 
 describe("radiano", () => {
   it("atira exceção se num for nulo", () => {
-    expect(() => radiano(undefined, null)).toThrow();
+    expect(() => radiano(undefined, null as any)).toThrow();
   });
 
   it("calcula o radiano de 180 graus", () => {
@@ -52,7 +52,7 @@ describe("radiano", () => {
 
 describe("tangente", () => {
   it("atira exceção se num for nulo", () => {
-    expect(() => tangente(undefined, null)).toThrow();
+    expect(() => tangente(undefined, null as any)).toThrow();
   });
 
   it("calcula a tangente", () => {
@@ -62,7 +62,7 @@ describe("tangente", () => {
 
 describe("arcoCosseno", () => {
   it("atira exceção se num for nulo", () => {
-    expect(() => arcoCosseno(undefined, null)).toThrow();
+    expect(() => arcoCosseno(undefined, null as any)).toThrow();
   });
 
   it("calcula o arco cosseno de zero", () => {
@@ -72,7 +72,7 @@ describe("arcoCosseno", () => {
 
 describe("arcoSeno", () => {
   it("atira exceção se num for nulo", () => {
-    expect(() => arcoSeno(undefined, null)).toThrow();
+    expect(() => arcoSeno(undefined, null as any)).toThrow();
   });
 
   it("calcula o arco seno de 1", () => {
@@ -82,7 +82,7 @@ describe("arcoSeno", () => {
 
 describe("arcoTangente", () => {
   it("atira exceção se num for nulo", () => {
-    expect(() => arcoTangente(undefined, null)).toThrow();
+    expect(() => arcoTangente(undefined, null as any)).toThrow();
   });
 
   it("calcula o arco seno", () => {

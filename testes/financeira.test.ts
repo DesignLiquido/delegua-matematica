@@ -1,4 +1,4 @@
-import { jurosCompostos, jurosSimples } from "../financeira";
+import { jurosCompostos, jurosSimples } from "../fontes/financeira";
 
 describe("jurosSimples", () => {
   it("testa o valor do juros simples", () => {

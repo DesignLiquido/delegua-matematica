@@ -1,4 +1,4 @@
-import { gerarPontosAbscissa, somaElementosMatriz } from "../algebra-linear";
+import { gerarPontosAbscissa, somaElementosMatriz } from "../fontes/algebra-linear";
 
 describe("somaElementosMatriz", () => {
   it("calcula a soma dos elementos da matriz", () => {

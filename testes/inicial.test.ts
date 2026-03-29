@@ -4,7 +4,7 @@ import {
   arredondarParaBaixo,
   numeroOcorrencias,
   pontosAleatorios,
-} from "../index";
+} from "../fontes/index";
 
 describe("aprox", () => {
   it("atira exceção se num for nulo", () => {

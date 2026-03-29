@@ -1,6 +1,6 @@
 {
   "name": "@designliquido/delegua-matematica",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Biblioteca de manejo de operações matemáticas em português, para JavaScript e Delégua",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
